@@ -31,7 +31,7 @@ $search    = $this->state->get('filter.search');
 	<?php endif; ?>
 
 	<?php if ($showFilt) : ?>
-		<form action="<?php echo Route::_('index.php?option=com_books_list&view=books'); ?>" method="get" class="booklist-filters mb-4">
+		<form action="<?php echo Route::_('index.php?option=com_books_list&view=books'); ?>" method="post" class="booklist-filters mb-4">
 			<input type="text" name="filter_search" class="form-control" style="max-width:240px"
 				value="<?php echo $this->escape($search); ?>" placeholder="<?php echo Text::_('COM_BOOKS_LIST_SEARCH_PLACEHOLDER'); ?>">
 
