@@ -32,9 +32,11 @@ A Joomla component for managing and presenting a catalogue of **books**, their
 
 ## Requirements
 
-- Joomla **4.4+** or **5.x**
+- Joomla **5.x** and **6.x** (tested on Joomla 6.1)
 - PHP **8.1+** (with the `zip` extension enabled for `.xlsx` import)
 - MySQL / MariaDB
+
+> Languages included: **English (en-GB)** and **Greek (el-GR)**.
 
 ## Installation
 

@@ -4,6 +4,10 @@
 # Local migration data (not part of the extension)
 /_migrate/
 
+# Playwright / test screenshots (root only; media images are kept)
+/.playwright-mcp/
+/*.png
+
 # OS / editor cruft
 Thumbs.db
 .DS_Store
