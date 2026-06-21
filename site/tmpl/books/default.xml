@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_BOOKS_LIST_MENU_BOOKS_TITLE">
+		<message><![CDATA[COM_BOOKS_LIST_MENU_BOOKS_DESC]]></message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request" addfieldprefix="Joomla\Component\Categories\Administrator\Field">
+			<field name="catid" type="category" extension="com_books_list"
+				label="COM_BOOKS_LIST_FIELD_CATID_LABEL"
+				description="COM_BOOKS_LIST_MENU_CATID_DESC">
+				<option value="">JGLOBAL_ALL</option>
+			</field>
+		</fieldset>
+	</fields>
+	<fields name="params">
+		<fieldset name="basic" label="JGLOBAL_FIELDSET_DISPLAY_OPTIONS">
+			<field name="books_per_page" type="number" default="12"
+				label="COM_BOOKS_LIST_CONFIG_PER_PAGE_LABEL" min="1" max="100" />
+			<field name="show_cover" type="radio" layout="joomla.form.field.radio.switcher" default="1"
+				label="COM_BOOKS_LIST_CONFIG_SHOW_COVER_LABEL">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			<field name="show_filters" type="radio" layout="joomla.form.field.radio.switcher" default="1"
+				label="COM_BOOKS_LIST_CONFIG_SHOW_FILTERS_LABEL">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

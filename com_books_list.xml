@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade">
+	<name>com_books_list</name>
+	<author>Nickpsal</author>
+	<authorEmail>nickpsal@gmail.com</authorEmail>
+	<authorUrl>https://github.com/nickpsal</authorUrl>
+	<creationDate>2026-06</creationDate>
+	<copyright>(C) 2026 Nickpsal. All rights reserved.</copyright>
+	<license>GNU General Public License version 3 or later</license>
+	<version>1.0.0</version>
+	<description>COM_BOOKS_LIST_XML_DESCRIPTION</description>
+
+	<namespace path="src">Nickpsal\Component\BooksList</namespace>
+
+	<scriptfile>script.php</scriptfile>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+	<!-- Site (frontend) files -->
+	<files folder="site">
+		<folder>language</folder>
+		<folder>src</folder>
+		<folder>tmpl</folder>
+	</files>
+
+	<media destination="com_books_list" folder="media">
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>images</folder>
+	</media>
+
+	<administration>
+		<menu img="class:books_list" link="option=com_books_list">com_books_list</menu>
+		<submenu>
+			<menu link="option=com_books_list&amp;view=books" view="books">COM_BOOKS_LIST_SUBMENU_BOOKS</menu>
+			<menu link="option=com_books_list&amp;view=authors" view="authors">COM_BOOKS_LIST_SUBMENU_AUTHORS</menu>
+			<menu link="option=com_books_list&amp;view=editors" view="editors">COM_BOOKS_LIST_SUBMENU_EDITORS</menu>
+			<menu link="option=com_categories&amp;extension=com_books_list" view="categories">COM_BOOKS_LIST_SUBMENU_CATEGORIES</menu>
+			<menu link="option=com_books_list&amp;view=import" view="import">COM_BOOKS_LIST_SUBMENU_IMPORT</menu>
+		</submenu>
+
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<folder>forms</folder>
+			<folder>language</folder>
+			<folder>services</folder>
+			<folder>sql</folder>
+			<folder>src</folder>
+			<folder>tmpl</folder>
+		</files>
+	</administration>
+</extension>

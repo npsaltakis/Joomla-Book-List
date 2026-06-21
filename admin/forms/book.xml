@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details" addfieldprefix="Joomla\Component\Categories\Administrator\Field">
+		<field name="id" type="number" label="JGLOBAL_FIELD_ID_LABEL" default="0" class="readonly" readonly="true" />
+
+		<field name="title" type="text" label="COM_BOOKS_LIST_FIELD_TITLE_LABEL"
+			required="true" size="40" class="input-xxlarge input-large-text" />
+
+		<field name="subtitle" type="text" label="COM_BOOKS_LIST_FIELD_SUBTITLE_LABEL" size="40" />
+
+		<field name="alias" type="text" label="COM_BOOKS_LIST_FIELD_ALIAS_LABEL"
+			description="COM_BOOKS_LIST_FIELD_ALIAS_DESC" hint="JFIELD_ALIAS_PLACEHOLDER" size="40" />
+
+		<field name="catid" type="categoryedit" label="COM_BOOKS_LIST_FIELD_CATID_LABEL"
+			extension="com_books_list" addfieldprefix="Joomla\Component\Categories\Administrator\Field"
+			required="true" default="" />
+
+		<field name="editor_id" type="editorlist" label="COM_BOOKS_LIST_FIELD_EDITOR_LABEL"
+			addfieldprefix="Nickpsal\Component\BooksList\Administrator\Field"
+			required="true">
+			<option value="">JNONE</option>
+		</field>
+
+		<field name="authors" type="authorlist" label="COM_BOOKS_LIST_FIELD_AUTHORS_LABEL"
+			addfieldprefix="Nickpsal\Component\BooksList\Administrator\Field"
+			required="true" multiple="true" layout="joomla.form.field.list-fancy-select" />
+
+		<field name="isbn" type="text" label="COM_BOOKS_LIST_FIELD_ISBN_LABEL" required="true" size="20" />
+		<field name="issn" type="text" label="COM_BOOKS_LIST_FIELD_ISSN_LABEL" size="20" />
+		<field name="year" type="number" label="COM_BOOKS_LIST_FIELD_YEAR_LABEL" required="true" min="0" max="3000" />
+		<field name="pages" type="number" label="COM_BOOKS_LIST_FIELD_PAGES_LABEL" required="true" min="0" />
+		<field name="language_book" type="text" label="COM_BOOKS_LIST_FIELD_LANGUAGE_BOOK_LABEL" size="20" />
+		<field name="price" type="number" label="COM_BOOKS_LIST_FIELD_PRICE_LABEL" required="true" step="0.01" min="0" />
+
+		<field name="image" type="media" label="COM_BOOKS_LIST_FIELD_IMAGE_LABEL" />
+		<field name="file" type="media" label="COM_BOOKS_LIST_FIELD_FILE_LABEL" types="document,image" />
+
+		<field name="url" type="url" label="COM_BOOKS_LIST_FIELD_URL_LABEL" filter="url" />
+		<field name="url_label" type="text" label="COM_BOOKS_LIST_FIELD_URL_LABEL_LABEL" size="40" />
+
+		<field name="description" type="editor" label="COM_BOOKS_LIST_FIELD_DESCRIPTION_LABEL"
+			filter="JComponentHelper::filterText" buttons="true" />
+
+		<field name="tags" type="tag" label="JTAG" mode="nested" multiple="true" />
+	</fieldset>
+
+	<fieldset name="publishing" label="JGLOBAL_FIELDSET_PUBLISHING">
+		<field name="state" type="list" label="JSTATUS" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+		<field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL" />
+		<field name="language" type="contentlanguage" label="JFIELD_LANGUAGE_LABEL">
+			<option value="*">JALL</option>
+		</field>
+		<field name="created" type="calendar" label="JGLOBAL_FIELD_CREATED_LABEL" translateformat="true" showtime="true" />
+		<field name="created_by" type="user" label="JGLOBAL_FIELD_CREATED_BY_LABEL" />
+		<field name="publish_up" type="calendar" label="COM_BOOKS_LIST_FIELD_PUBLISH_UP_LABEL" translateformat="true" showtime="true" />
+		<field name="publish_down" type="calendar" label="COM_BOOKS_LIST_FIELD_PUBLISH_DOWN_LABEL" translateformat="true" showtime="true" />
+	</fieldset>
+
+	<fieldset name="metadata" label="JGLOBAL_FIELDSET_METADATA_OPTIONS">
+		<field name="metakey" type="textarea" label="JFIELD_META_KEYWORDS_LABEL" rows="3" cols="30" />
+		<field name="metadesc" type="textarea" label="JFIELD_META_DESCRIPTION_LABEL" rows="3" cols="30" />
+	</fieldset>
+</form>

@@ -1,0 +1,1 @@
+-- Schema version baseline 1.0.0 for com_books_list

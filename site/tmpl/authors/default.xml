@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_BOOKS_LIST_MENU_AUTHORS_TITLE">
+		<message><![CDATA[COM_BOOKS_LIST_MENU_AUTHORS_DESC]]></message>
+	</layout>
+	<fields name="params">
+		<fieldset name="basic" label="JGLOBAL_FIELDSET_DISPLAY_OPTIONS">
+			<field name="authors_per_page" type="number" default="24"
+				label="COM_BOOKS_LIST_CONFIG_PER_PAGE_LABEL" min="1" max="100" />
+		</fieldset>
+	</fields>
+</metadata>

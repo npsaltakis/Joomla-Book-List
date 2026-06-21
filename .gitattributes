@@ -1,0 +1,9 @@
+# Normalise line endings: store text files with LF in the repo
+* text=auto eol=lf
+
+# Binary assets
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.zip binary

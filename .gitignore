@@ -1,0 +1,12 @@
+# Build output / packaged extension
+/dist/
+
+# Local migration data (not part of the extension)
+/_migrate/
+
+# OS / editor cruft
+Thumbs.db
+.DS_Store
+.idea/
+.vscode/
+*.log
