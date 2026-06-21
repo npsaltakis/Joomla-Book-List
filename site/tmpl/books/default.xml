@@ -8,7 +8,7 @@
 			<field name="catid" type="category" extension="com_books_list"
 				label="COM_BOOKS_LIST_FIELD_CATID_LABEL"
 				description="COM_BOOKS_LIST_MENU_CATID_DESC">
-				<option value="">JGLOBAL_ALL</option>
+				<option value="">COM_BOOKS_LIST_FIELD_CATID_ALL</option>
 			</field>
 		</fieldset>
 	</fields>
