@@ -14,8 +14,21 @@
 	</fields>
 	<fields name="params">
 		<fieldset name="basic" label="JGLOBAL_FIELDSET_DISPLAY_OPTIONS">
+			<field name="frontpage" type="radio" layout="joomla.form.field.radio.switcher" default="0"
+				label="COM_BOOKS_LIST_CONFIG_FRONTPAGE_LABEL"
+				description="COM_BOOKS_LIST_CONFIG_FRONTPAGE_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field name="frontpage_limit" type="number" default="6" min="1" max="100"
+				label="COM_BOOKS_LIST_CONFIG_FRONTPAGE_LIMIT_LABEL"
+				description="COM_BOOKS_LIST_CONFIG_FRONTPAGE_LIMIT_DESC"
+				showon="frontpage:1" />
+
 			<field name="books_per_page" type="number" default="12"
-				label="COM_BOOKS_LIST_CONFIG_PER_PAGE_LABEL" min="1" max="100" />
+				label="COM_BOOKS_LIST_CONFIG_PER_PAGE_LABEL" min="1" max="100"
+				showon="frontpage:0" />
 			<field name="show_cover" type="radio" layout="joomla.form.field.radio.switcher" default="1"
 				label="COM_BOOKS_LIST_CONFIG_SHOW_COVER_LABEL">
 				<option value="0">JHIDE</option>

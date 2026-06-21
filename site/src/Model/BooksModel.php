@@ -47,10 +47,24 @@ class BooksModel extends ListModel
 
 		$this->setState('params', $params);
 
-		$limit = (int) $params->get('books_per_page', $app->get('list_limit', 12));
-		$this->setState('list.limit', $app->getUserStateFromRequest('global.list.limit', 'limit', $limit, 'uint'));
+		// Frontpage mode: show a fixed number of books and no pagination.
+		$frontpage = (int) $params->get('frontpage', 0);
+
+		if ($frontpage) {
+			$limit = (int) $params->get('frontpage_limit', 6);
+			$this->setState('list.limit', $limit);
+		} else {
+			$limit = (int) $params->get('books_per_page', $app->get('list_limit', 12));
+			$this->setState('list.limit', $app->getUserStateFromRequest('global.list.limit', 'limit', $limit, 'uint'));
+		}
 
 		parent::populateState($ordering, $direction);
+
+		// Force the configured limit and first page regardless of the request.
+		if ($frontpage) {
+			$this->setState('list.limit', $limit);
+			$this->setState('list.start', 0);
+		}
 	}
 
 	protected function getStoreId($id = '')

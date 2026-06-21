@@ -116,8 +116,10 @@ $search    = $this->state->get('filter.search');
 			<?php endforeach; ?>
 		</div>
 
-		<div class="mt-4">
-			<?php echo $this->pagination->getListFooter(); ?>
-		</div>
+		<?php if (!$params->get('frontpage', 0)) : ?>
+			<div class="mt-4">
+				<?php echo $this->pagination->getListFooter(); ?>
+			</div>
+		<?php endif; ?>
 	<?php endif; ?>
 </div>

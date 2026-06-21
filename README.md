@@ -4,7 +4,7 @@ A Joomla component for managing and presenting a catalogue of **books**, their
 **authors** and **publishers/editors**, with a clean Bootstrap-based frontend.
 
 - **Author:** Nickpsal · <nickpsal@gmail.com> · <https://github.com/nickpsal>
-- **Version:** 1.0.0
+- **Version:** 1.1.0
 - **License:** GNU General Public License v3 or later
 
 ---
@@ -40,7 +40,7 @@ A Joomla component for managing and presenting a catalogue of **books**, their
 
 ## Installation
 
-1. Download the latest package: `dist/com_books_list_v1.0.0.zip`
+1. Download the latest package: `dist/com_books_list_v1.1.0.zip`
    (or build it yourself — see [Building](#building-the-install-package)).
 2. In the Joomla admin go to **System → Install → Extensions**.
 3. Upload the ZIP. The manifest uses `method="upgrade"`, so installing a newer
@@ -97,7 +97,7 @@ PowerShell:
 ```powershell
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $src  = (Get-Location).Path
-$dest = "dist/com_books_list_v1.0.0.zip"
+$dest = "dist/com_books_list_v1.1.0.zip"
 New-Item -ItemType Directory -Force dist | Out-Null
 [System.IO.Compression.ZipFile]::CreateFromDirectory($src, $dest)
 ```
